@@ -12,9 +12,9 @@ data "aws_iam_policy_document" "terraform_origin_access_identity" {
     effect = "Allow"
     principals {
       type        = "service"
-      identifiers = ["cloudfornt.amazonaws.com"]
+      identifiers = ["cloudfront.amazonaws.com"]
     }
-    actions   = ["s3:GetObject", "s3:PutObject"]
+    actions   = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.terrafrom_s3_bucket_cdn.arn}/*"]
   }
 }
@@ -110,7 +110,7 @@ resource "aws_cloudfront_distribution" "tf_cloudfront_distribution" {
 }
 
 resource "aws_s3_object" "tf_index_html"{
-    bucket = aws_cloudfront_distribution.tf_cloudfront_distribution.id
+    bucket = aws_s3_bucket.terrafrom_s3_bucket_cdn.bucket.bucket
     key = "index.html"
     source = "./assets/index.html"
     content_type = "text/html"
