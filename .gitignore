@@ -24,4 +24,5 @@ override.tf.json
 
 backend.tf
 variable.tf
+version.tf
 terraform.tfvars
