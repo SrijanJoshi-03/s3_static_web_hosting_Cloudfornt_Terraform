@@ -21,3 +21,7 @@ override.tf.json
 
 # Include a template if you want to show others what variables to fill out
 !example.tfvars
+
+backend.tf
+variable.tf
+terraform.tfvars
