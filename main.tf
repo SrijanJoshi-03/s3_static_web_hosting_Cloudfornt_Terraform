@@ -11,10 +11,10 @@ data "aws_iam_policy_document" "terraform_origin_access_identity" {
     sid    = "Allow CloudFront to read form the orign bucket"
     effect = "Allow"
     principals {
-      type        = "service"
+      type        = "Service"
       identifiers = ["cloudfront.amazonaws.com"]
     }
-    actions   = ["s3:GetObject"]
+    actions   = ["s3:GetObject","s3:PutObject"]
     resources = ["${aws_s3_bucket.terrafrom_s3_bucket_cdn.arn}/*"]
   }
 }
