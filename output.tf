@@ -1,7 +1,7 @@
 # 1. The CloudFront URL (The most important one!)
 output "cloudfront_domain_name" {
   description = "The URL you will use to visit your website"
-  value       = "https://${aws_cloudfront_distribution.tf_cloudfront_distribution}"
+  value       = "https://${aws_cloudfront_distribution.tf_cloudfront_distribution.domain_name}"
 }
 
 # 2. The exact CloudFront Distribution ID

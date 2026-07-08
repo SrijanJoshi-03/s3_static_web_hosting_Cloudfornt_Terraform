@@ -110,7 +110,7 @@ resource "aws_cloudfront_distribution" "tf_cloudfront_distribution" {
 }
 
 resource "aws_s3_object" "tf_index_html"{
-    bucket = aws_s3_bucket.terrafrom_s3_bucket_cdn.bucket.bucket
+    bucket = aws_s3_bucket.terrafrom_s3_bucket_cdn.bucket.id
     key = "index.html"
     source = "./assets/index.html"
     content_type = "text/html"
