@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudFront + S3 Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #232f3e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #e68a00;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        code {
+            background: #eef2f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 AWS CloudFront + S3 Demo</h1>
+
+    <p>
+        This page is being served through an
+        <strong>Amazon CloudFront Distribution</strong>
+        with an <strong>Amazon S3 bucket</strong> configured as the origin.
+    </p>
+
+    <p>
+        The complete infrastructure—including the S3 bucket, CloudFront
+        distribution, Origin Access Control (OAC), IAM policies, and related
+        AWS resources—was provisioned using <strong>Terraform</strong>.
+    </p>
+
+    <a class="button"
+       href="https://github.com/yourusername/your-repository"
+       target="_blank">
+        View Terraform Source on GitHub
+    </a>
+
+    <footer>
+        Built with AWS ☁️ + Terraform 🌍
+    </footer>
+</div>
+
+</body>
+</html>
